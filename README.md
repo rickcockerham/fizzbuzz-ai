@@ -9,13 +9,13 @@ If that weird port number scares your browser please let me know.
 
 This program shows my skill with the following technologies:
 
-Ruby on Rails (2.5.3, 6.0.7)
-C (posix)
-Machine Learning (a simple backpropagating, gradient descent, neural network)
-RubyC (A system to make C methods available in Ruby.)
+Ruby on Rails (2.5.3, 6.0.7)  
+C (posix)  
+Machine Learning (a simple backpropagating, gradient descent, neural network)  
+RubyC (A system to make C methods available in Ruby.)  
 
 The example was deployed to a linode.com node.  However, I have also worked with Rackspace, Google, Linode, and AWS.
 
-Apache
-Passenger
-iptables (do you feel lucky, punk?  Go ahead, check my ports.)
+Apache  
+Passenger  
+iptables (do you feel lucky, punk?  Go ahead, check my ports.)  
