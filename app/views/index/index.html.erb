@@ -1,0 +1,83 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+    <style>
+    div {
+	width:80px;
+	height:30px;
+	float:left;
+	border:1px solid black;
+	margin:1px;
+    }
+    .clearleft {
+	width:0px;
+	clear: left;
+	border: none;
+    }
+</style>
+</head>
+    
+    <body>
+    <h2>Neural Network leaning the FizzBuzz problem...</h2>
+    <h3>Training run #<span id="runnumber">0</span></h3>
+    
+    <% for x in 0..99
+if x % 5 == 0 %>
+    <div class="clearleft"></div>
+    <% end %>
+    <div id="val<%=x+1%>"><%=x%></div>
+    <% end %>
+    
+    
+<%= javascript_tag do %>
+
+const donere = /err/;
+var run = 0;
+
+callnext_number();
+
+const timeit = setInterval(callnext_number, 2000);
+
+async function callnext_number() {
+    var ret = '';
+    promi = new Promise(fillin => {jQuery.ajax({
+	url: "index/testit",
+	type: "GET",
+	success: function(data){
+	    var vals = data.split(' ');
+	    console.log(vals);
+	    for(let x = 1; x <= 100; x++) {
+		let ans = vals[x-1].split('=');
+		$('#val'+x).html(ans[1]);
+		if(donere.exec(ans[1])) {
+		    $('#val'+x).css("background-color","#ff3333");
+		} else {
+		    $('#val'+x).css("background-color","white");
+		}
+	    }
+	    if(donere.exec(data)) {
+		jQuery.ajax({url: "index/trainmore",type: "GET"});
+	    } else {
+		clearInterval(timeit);
+		alert('done');
+	    }
+	    $('#runnumber').html(++run);
+	},
+	error: function(data) {
+	    alert(data);
+	}//return
+    });
+				  }
+		       );
+    await promi;
+    
+    return;
+}//call next
+
+<% end %>
+    
+</body>
+    
+</html>
+    
