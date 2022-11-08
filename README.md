@@ -8,12 +8,18 @@ I wrote the neural network code in C and the web interface in Ruby on Rails.  Th
 If that weird port number scares your browser please let me know.
 
 This program shows my skill with the following technologies:
-Ruby on Rails (2.5.3, 6.0.7)
-C (posix)
-Machine Learning (a simple backpropagating, gradient descent, neural network)
-RubyC (A system to make C methods available in Ruby.)
+
+Ruby on Rails (2.5.3, 6.0.7)  
+C (posix)  
+Machine Learning (a simple backpropagating, gradient descent, neural network)  
+RubyC (A system to make C methods available in Ruby.)  
 
 The example was deployed to a linode.com node.  However, I have also worked with Rackspace, Google, Linode, and AWS.
-Apache
-Passenger
-iptables (do you feel lucky, punk?  Go ahead, check my ports.)
+
+Apache  
+Passenger  
+iptables (do you feel lucky, punk?  Go ahead, check my ports.)  
+
+This is obviously not a fully functioning git repo that you can simply download and run.  However everything is there if you know what you're doing.  The working solution is deployed to the link above.
+
+Rick
