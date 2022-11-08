@@ -19,3 +19,7 @@ The example was deployed to a linode.com node.  However, I have also worked with
 Apache  
 Passenger  
 iptables (do you feel lucky, punk?  Go ahead, check my ports.)  
+
+This is obviously not a fully functioning git repo that you can simply download and run.  However everything is there if you know what you're doing.  The working solution is deployed to the link above.
+
+Rick
