@@ -12,7 +12,7 @@
 #include <ruby.h>
 
 //nn constants
-double Error, eta = 0.03; // a very slow learning rate
+double eta = 0.03; // a very slow learning rate
 double alpha = 0.90, smallwt = 0.5;
 #define PASSES 1 //passes per training run.
 #define NUMPATTERNS 100 // 1-100
@@ -136,6 +136,8 @@ void init_ai() {
   patterns();
 }
 
+//#######################################
+// This is basically my test.  It the answer is correct it will return 0-3 otherwise it returns -1.
 int gotest(int x) {
   double max = 0.0;
   int nn, maxx = 0;
@@ -161,10 +163,9 @@ void train() {
 
   int hid, nn, p, epoch;
   
-  for(nn = 0; nn < NNS; nn++) { // loop through both neural nets
+  for(nn = 0; nn < NNS; nn++) { // loop through the neural nets
 
     for( epoch = 0 ; epoch < PASSES ; epoch++) {
-      Error = 0.0;
       
       for( p = 1 ; p < NUMPATTERNS+1 ; p++ ) {    /* repeat for all the training patterns */
 
@@ -184,9 +185,6 @@ void train() {
 	
 	// Sigmoidal Outputs
 	Output[nn][p] = 1.0/(1.0 + exp(-SumO[nn][p]));
-
-	//SSE Error
-	//Error += 0.5 * (expected[nn][p] - Output[nn][p]) * (expected[nn][p] - Output[nn][p]);
 
 	//Sigmoidal Outputs, SSE
 	DeltaO[nn] = (expected[nn][p] - Output[nn][p]) * Output[nn][p] * (1.0 - Output[nn][p]) ;
