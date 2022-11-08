@@ -22,9 +22,9 @@ iptables (do you feel lucky, punk?  Go ahead, check my ports.)
 
 This is obviously not a fully functioning git repo that you can simply download and run.  However everything is there if you know what you're doing.  The working solution is deployed to the link above.
 The interesting files:  
-app/fbai/fbai.c
-app/controllers/index_controller.rb
-app/views/index/index.html.erb
+app/fbai/fbai.c  
+app/controllers/index_controller.rb  
+app/views/index/index.html.erb  
 
 No rspecs?  I didn't feel it was appropriate to include a test since the C program has to run a variable number of times and tests itself before sending the output to the view.  My 'test' is around fbai.c line 140.
 
