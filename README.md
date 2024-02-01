@@ -4,8 +4,7 @@ This is my example code project.  It's a Ruby and C program that learns the Fizz
 
 I realize this problem is extremely easy to solve and there is a lot of information on how to solve it efficiently, but I decided to do it the hard way.  This program lets a neural network learn the solution.
 
-I wrote the neural network code in C and the web interface in Ruby on Rails.  The working example can be viewed here http://ai-stocktrading.com:81
-If that weird port number scares your browser please let me know.
+I wrote the neural network code in C and the web interface in Ruby on Rails.  My working AI can be viewed here https://www.ai-stocktrading.com
 
 This program shows my skill with the following technologies:
 
